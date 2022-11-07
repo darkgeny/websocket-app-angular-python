@@ -1,0 +1,34 @@
+[
+    {
+        "name": "kylin CHECK",
+        "linuxcmd": "*kylin"
+    },
+    {
+        "name": "+kylin STOP",
+        "linuxcmd": "*process?cmd=j.cluster.stop.kylin.html"
+    },
+    {
+        "name": "+kylin START",
+        "linuxcmd": "*process?cmd=j.cluster.start.kylin.html"
+    },
+    {
+        "name": "+kylin RESTART",
+        "linuxcmd": "*process?cmd=j.cluster.restart.kylin.html"
+    },
+    {
+        "name": "hbase CHECK",
+        "linuxcmd": "*hbase"
+    },
+    {
+        "name": "+hbase STOP",
+        "linuxcmd": "*process?cmd=j.cluster.stop.hbase.html"
+    },
+    {
+        "name": "+hbase START",
+        "linuxcmd": "*process?cmd=j.cluster.start.hbase.html"
+    },
+    {
+        "name": "+hbase RESTART",
+        "linuxcmd": "*process?cmd=j.cluster.restart.hbase.html"
+    }
+]

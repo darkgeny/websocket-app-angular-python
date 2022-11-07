@@ -1,0 +1,72 @@
+<html>
+<head>
+</head>
+<body>
+  <!--form [formGroup]="form"-->
+
+  <h1>
+    Dashboard Hadoop
+  </h1>
+  <br>
+
+  <div class="container">
+    <div class="form-group">
+      <select
+        (change)="onchangeareatxt()"
+        [ngStyle]="{'width.px': areacmdmsg.offsetWidth }"
+        class="form-control"
+        ngModel (ngModelChange)="chosedCmd($event)">
+        <option disabled>Select Command</option>
+        <option
+          *ngFor="let cmd of commands_list"
+          [value]="cmd.linuxcmd"
+          [ngValue]="cmd.linuxcmd"
+          >
+          <!--[selected]="cmd.name"-->
+            {{cmd.name}}
+        </option>
+      </select>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="column grow-wrap">
+      <textarea #areacmdmsg
+        minlength="5"
+        name="contentInput"
+        cols="50" rows="1"
+        [(ngModel)]="content"
+        [value]="areatxt"><!--(input)="areatxt=$event.target.areatxt"-->
+      </textarea>
+      <br>
+    <button [ngStyle]="{'width.px': areacmdmsg.offsetWidth }" (click)="sendMsg()">Send</button>
+    </div>
+  </div>
+
+  <div>
+    <h2>Sent</h2>
+    <button (click)="clearSent()">Clear</button>
+    <p>
+      <span *ngFor="let item of sent">Source: {{item.source}} -> Content {{item.content}}<br></span>
+    </p>
+  </div>
+
+  <div>
+    <h2>Received</h2>
+    <button (click)="clearReceived()">Clear</button>
+    <p>
+      <span *ngFor="let item of received" [innerHTML]="item.content"></span>
+    </p>
+    <!--/form-->
+  </div>
+
+
+
+
+
+        <!--div *ngIf="f['website'].touched && f['website'].invalid" class="alert alert-danger">
+          <div *ngIf="f['website'].errors && f['website'].errors['required']">Name is required.</div>
+        </div-->
+</body>
+</html>
+      

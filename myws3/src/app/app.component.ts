@@ -3,6 +3,7 @@ import { WebsocketService } from "./websocket.service";
 import { FormGroup, FormControl, Validators} from '@angular/forms';
 import { CommandHadoop } from './command-hadoop';
 //import commands from './commands.json';
+import { PrettyJsonPipe } from './prettyjson.pipe'
 
 @Component({
   selector: "app-root",
@@ -20,6 +21,7 @@ export class AppComponent{
   sent:       any[]  = [];
   areatxt=""
 
+  
   onchangeareatxt() {
     this.content = this.areatxt;
   }

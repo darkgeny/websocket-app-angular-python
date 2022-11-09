@@ -5,8 +5,9 @@
   <!--form [formGroup]="form"-->
 
   <h1>
-    Dashboard Hadoop
+    Dashboard
   </h1>
+  <h2>Services monitor/start/stop</h2>
   <br>
 
   <div class="container">
@@ -54,9 +55,10 @@
   <div>
     <h2>Received</h2>
     <button (click)="clearReceived()">Clear</button>
-    <p>
-      <span *ngFor="let item of received" [innerHTML]="item.content"></span>
-    </p>
+    <pre class="h-full w-full bg-primary-900 rounded-sm text-yellow-500 p-3 overflow-auto shadow-md"
+      *ngFor="let item of received"
+      [innerHTML]="item.content | prettyjson: []">
+      </pre>
     <!--/form-->
   </div>
 

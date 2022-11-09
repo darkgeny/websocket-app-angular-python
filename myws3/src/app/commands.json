@@ -1,5 +1,9 @@
 [
     {
+        "name": "ALL CHECK",
+        "linuxcmd": "*all"
+    },
+    {
         "name": "kylin CHECK",
         "linuxcmd": "*kylin"
     },

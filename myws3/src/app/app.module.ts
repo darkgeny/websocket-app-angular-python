@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { WebsocketService } from './websocket.service';
+import { PrettyJsonPipe } from './prettyjson.pipe';
 //import { WsclientService } from './wsclient.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PrettyJsonPipe
   ],
   imports: [
     BrowserModule,
